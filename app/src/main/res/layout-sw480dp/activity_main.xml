@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_menu"
+    android:background="@color/bone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen10"
+    tools:context=".main.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            >
+
+            <View
+                android:id="@+id/background_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_quotes_main"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/rubik400"
+                android:text="@string/judul_quotes"
+                android:textColor="@color/bone"
+                android:layout_marginTop="@dimen/dimen20"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mohon_tunggu"
+                android:id="@+id/text_utama"
+                android:fontFamily="@font/rubik400"
+                android:layout_below="@id/name_quotes_main"
+                android:padding="@dimen/dimen20"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColor="@color/bone"
+                />
+
+            <View
+                android:id="@+id/background_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen300"
+                android:layout_below="@id/background_quotes"
+                android:layout_marginTop="@dimen/dimen10"
+                android:background="@color/spanish_green" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background_quotes"
+                android:id="@+id/name_pesan"
+                android:fontFamily="@font/rubik400"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="@string/judul_pesan"
+                android:textColor="@color/bone"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_pesan"
+                android:fontFamily="@font/rubik400"
+                android:layout_marginStart="@dimen/dimen30"
+                android:text="@string/pesan"
+                android:id="@+id/pesan1"
+                android:textAlignment="center"
+                android:textColor="@color/bone"
+                android:layout_marginTop="@dimen/dimen10"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pesan1"
+                android:layout_marginStart="@dimen/dimen30"
+                android:fontFamily="@font/rubik400"
+                android:text="@string/pesan2"
+                android:id="@+id/pesan2"
+                android:textColor="@color/bone"
+                android:layout_marginTop="@dimen/dimen10"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pesan2"
+                android:layout_marginStart="@dimen/dimen30"
+                android:fontFamily="@font/rubik400"
+                android:text="@string/pesan3"
+                android:id="@+id/pesan3"
+                android:textColor="@color/bone"
+                android:layout_marginTop="@dimen/dimen10"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pesan3"
+                android:layout_marginStart="@dimen/dimen30"
+                android:fontFamily="@font/rubik400"
+                android:text="@string/copyright"
+                android:id="@+id/copyright"
+                android:textColor="@color/bone"
+                android:layout_marginTop="@dimen/dimen50"
+                />
+
+            <Button
+                android:id="@+id/button_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background_copyright"
+                android:layout_marginLeft="@dimen/dimen20"
+                android:layout_marginTop="@dimen/dimen20"
+                android:layout_marginRight="@dimen/dimen20"
+                android:background="@drawable/border_button_close"
+                android:fontFamily="@font/rubik400"
+                android:text="@string/value_about"
+                android:backgroundTint="@color/spanish_green"
+                android:textColor="@color/white" />
+
+
+
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/flayout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" >
+        </FrameLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_anchor="@+id/appBarLayout"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_anchorGravity="center"
+            app:titleTextColor="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/bone"
+        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/header_nav"
+        android:padding="5dp"
+        app:menu="@menu/menu_nav" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
